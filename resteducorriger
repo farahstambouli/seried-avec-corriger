@@ -1,0 +1,170 @@
+//exercice1
+function tab(array){
+    var sommeP=0, sommeImp=0, diff=0
+    for(var i=0;i<array.length;i+=1){
+        if(array[i]%2==0){
+            //sommeP+=array[i]
+            sommeP=sommeP+array[i]
+        }else{
+            sommeImp+=array[i]
+        }
+        diff=sommeP-sommeImp
+    }
+    return diff
+
+}
+//autre methode
+// while
+ 
+function whTest(array){
+    var sommeP=0, sommeImp=0, diff=0
+    var i=0
+    while(i<array.length){
+        if(array[i]%2==0){
+            //sommeP+=array[i]
+            sommeP=sommeP+array[i]
+        }else{
+            sommeImp+=array[i]
+        }
+        diff=sommeP-sommeImp
+        i++
+
+    }
+    if(diff>0){
+        return diff
+    }else{
+        return diff*(-1)
+    }
+
+}
+
+//Do while
+function dotest(array){
+    var sommeP=0, sommeImp=0, diff=0
+    var i=0
+    do{
+        if(array[i]%2==0){
+            //sommeP+=array[i]
+            sommeP=sommeP+array[i]
+        }else{
+            sommeImp+=array[i]
+        }
+        diff=sommeP-sommeImp
+        i++
+    }while(i<array.length)
+    return diff
+
+}
+//exercice2
+//autre methode(madame)(ta methode est juste)
+function power(x,n){
+    var i=1
+    var res
+    while(i<=n){
+        res=x**i
+        i++
+    }
+    return res
+}
+function print(n){
+
+    var i=1
+    while(i<=n){
+        console.log("bonjour")
+        i++
+    }
+} 
+//exercice3(moi)
+function egalite(a,b){
+    for(var i=0;i<a.length;i+=1){
+        for(var j=0;j<b.length;j+=1)
+
+        if(a[i]==b[j] && (a.length==b.length)){
+            //i fait faire la comparaison entre position et position; et il faut qu'ils ont la memes longeurs
+    
+            return "vrai"
+        }
+        else {
+            return "faux"
+        }
+    }
+}
+
+//exercice 4(moi)
+
+function afficher(x){
+    if(x%2==0){
+        var aff 
+        aff="pair"
+    }
+    else {
+        aff="impair"
+    }
+    return aff
+}
+//exercice4 (madame)
+function test (x){
+    if(x%2==0){
+     return "pair"
+ 
+    }
+   else {return 'umpair'}
+ 
+ }
+ //exercice5
+ function test (a,x){
+ var occ=0
+ for (var i=0;i<a.length;i++){
+     if (a[i]==x){
+         occ++
+     }
+ }return occ
+ }
+ //exercice6
+ function test(arr){
+     var pair=0
+     var impair=0
+     var i=0
+     while(i<arr.length){
+         if(arr[i]%2!==0){
+             impair+=1
+         }else{
+             pair++
+         }
+         i++
+     }return [pair,impair]
+ }
+
+ //exercice7
+ //eya
+ function tri(arr){
+    do {
+    var k=0
+    for (var i=0;i<arr.length-1;i++){
+        if (arr[i+1]<arr[i]) {
+            var j=arr[i]
+            arr[i]=arr[i+1] 
+            arr[i+1]=j
+            k=1
+        }
+    }} while(k==1)
+    return arr 
+
+}
+
+ //wissem
+ function sortarr(arr) {
+    var sortedArr = [];
+    for (i = 0; i < arr.length; i++) {
+      for (j = i + 1; j < arr.length; j++) {
+        var n = 0;
+        if (arr[i] > arr[j]) {
+          n = arr[i];
+          arr[i] = arr[j];
+          arr[j] = n;
+        }
+      }
+      sortedArr.push(arr[i]);
+    }
+    return sortedArr;
+  }
